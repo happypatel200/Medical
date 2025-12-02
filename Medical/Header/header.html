@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Header</title>
+    <link rel="stylesheet" href="header.css" />
+</head>
+
+<body>
+
+    <div class="top-header">
+        <div class="container top-container">
+            <div class="logo top-logo">
+                <img src="../images/logo.png" alt="Medical Logo" />
+            </div>
+            <div class="contact-info">
+                <div class="info-block">
+                    <img src="../images/phone.png" class="icon" alt="Phone Icon" />
+                    <div>
+                        <div class="label">EMERGENCY</div>
+                        <div class="value">(237) 681-812-255</div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <img src="../images/clock.png" class="icon" alt="Clock Icon" />
+                    <div>
+                        <div class="label">WORK HOUR</div>
+                        <div class="value">09:00 - 20:00 Everyday</div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <img src="../images/map.png" class="icon" alt="Map Icon" />
+                    <div>
+                        <div class="label">LOCATION</div>
+                        <div class="value">0123 Some Place</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="mobile-logo">
+                <img src="../images/logo-white.png" alt="Mobile Logo" />
+            </div>
+            <nav class="nav-links-desktop">
+                <a href="#" class="active">Home</a>
+                <a href="../About_us/aboutus.html">About us</a>
+                <a href="../service/service.html">Services</a>
+                <a href="../Doctors/doctors.html">Doctors</a>
+                <a href="../News/news.html">News</a>
+                <a href="../Contact/contact.html">Contact</a>
+            </nav>
+            <div class="right-controls">
+                <img src="../images/search.png" class="search-icon" alt="Search Icon" />
+                <a href="#" class="btn btn-appointment">Appointment</a>
+                <img src="../images/menu.png" class="menu-icon" id="openMobileMenu" alt="Menu Icon" />
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-header container">
+            <div class="logo mobile-overlay-logo">
+                <img src="../images/logo-white.png" alt="Mobile Meddical Logo" />
+            </div>
+            <div class="overlay-controls">
+                <img src="../images/search.png" class="search-icon" alt="Search Icon" />
+                <img src="../images/close.png" class="close-icon" id="closeMobileMenu" alt="Close Menu Icon" />
+            </div>
+        </div>
+        <nav class="mobile-overlay-nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="#">Doctors</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </nav>
+        <a href="#" class="btn btn-appointment-overlay">Appointment</a>
+    </div>
+
+    <script src="header.js"></script>
+
+</body>
+
+</html>

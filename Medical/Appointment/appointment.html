@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment - Medical</title>
+    <link rel="stylesheet" href="../Appointment/style.css" />
+</head>
+
+<body>
+
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container top-container">
+            <div class="logo top-logo">
+                <img src="../images/logo.png" alt="Medical Logo" />
+            </div>
+            <div class="contact-info">
+                <div class="info-block">
+                    <img src="../images/phone.png" class="icon" alt="Phone Icon" />
+                    <div>
+                        <div class="label">EMERGENCY</div>
+                        <div class="value">(237) 681-812-255</div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <img src="../images/clock.png" class="icon" alt="Clock Icon" />
+                    <div>
+                        <div class="label">WORK HOUR</div>
+                        <div class="value">09:00 - 20:00 Everyday</div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <img src="../images/map.png" class="icon" alt="Map Icon" />
+                    <div>
+                        <div class="label">LOCATION</div>
+                        <div class="value">0123 Some Place</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="mobile-logo">
+                <img src="../images/logo-white.png" alt="Mobile Logo" />
+            </div>
+            <nav class="nav-links-desktop">
+                <a href="../Home/home.html">Home</a>
+                <a href="../About_us/aboutus.html">About us</a>
+                <a href="../service/service.html">Services</a>
+                <a href="../Doctors/doctors.html">Doctors</a>
+                <a href="../News/news.html">News</a>
+                <a href="../Contact/contact.html">Contact</a>
+            </nav>
+            <div class="right-controls">
+                <img src="../images/search.png" class="search-icon" alt="Search Icon" />
+                <a href="../Appointment/appointment.html" class="btn btn-appointment">Appointment</a>
+                <img src="../images/menu.png" class="menu-icon" id="openMobileMenu" alt="Menu Icon" />
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-header container">
+            <div class="logo mobile-overlay-logo">
+                <img src="../images/logo-white.png" alt="Mobile Meddical Logo" />
+            </div>
+            <div class="overlay-controls">
+                <img src="../images/search.png" class="search-icon" alt="Search Icon" />
+                <img src="../images/menu.png" class="close-icon" id="closeMobileMenu" alt="Close Menu Icon" />
+            </div>
+        </div>
+        <nav class="mobile-overlay-nav-links">
+            <a href="../Home/home.html">Home</a>
+            <a href="../About_us/aboutus.html">About us</a>
+            <a href="../service/service.html">Services</a>
+            <a href="../Doctors/doctors.html">Doctors</a>
+            <a href="../News/news.html">News</a>
+            <a href="../Contact/contact.html">Contact</a>
+        </nav>
+        <a href="../Appointment/appointment.html" class="btn btn-appointment-overlay">Appointment</a>
+    </div>
+
+    <!-- doctors-us-banner section  -->
+
+    <section class="bener-section">
+        <div class="container">
+            <div class="bener-content">
+                <div class="bener-text">
+                    <p class="breadcrumb"><a href="../Home/home.html">Home</a> / <span>Appointment</span></p>
+                    <h1>Book an Appointment</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment Section -->
+    <section class="book-appointment-section">
+        <div class="book-container">
+
+            <div class="appointment-main-content">
+                <div class="appointment-header">
+                    <h2>Book an Appointment</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+                        ornare
+                        ornare. Convallis felis vitae tortor augue. Velit nascetur proin massa in. Consequat faucibus
+                        porttitor enim et.</p>
+                </div>
+
+                <div class="appointment-form-wrapper">
+                    <form class="appointment-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name" required />
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="" disabled selected>Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <img src="../images/dropdown.png" alt="Dropdown Icon" class="dropdown-icon" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Phone" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Date" onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" required />
+                                <img src="../images/dropdown.png" alt="Dropdown Icon" class="dropdown-icon" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Time" onfocus="(this.type='time')"
+                                    onblur="(this.type='text')" required />
+                                <img src="../images/dropdown.png" alt="Dropdown Icon" class="dropdown-icon" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <select required>
+                                    <option value="" disabled selected>Doctor</option>
+                                    <option value="dr-smith">Dr. Smith</option>
+                                    <option value="dr-jones">Dr. Jones</option>
+                                    <option value="dr-williams">Dr. Williams</option>
+                                </select>
+                                <img src="../images/dropdown.png" alt="Dropdown Icon" class="dropdown-icon" />
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="" disabled selected>Department</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="dermatology">Dermatology</option>
+                                    <option value="pediatrics">Pediatrics</option>
+                                </select>
+                                <img src="../images/dropdown.png" alt="Dropdown Icon" class="dropdown-icon" />
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="schedule-hours-card">
+                <h2>Schedule hours</h2>
+                <div class="hours-list">
+                    <div class="day-time"><span>Monday</span><img src="../images/lineicon.png" alt="line"
+                            class="line-separator"><span>09:00 AM - 07:00 PM</span></div>
+                    <div class="day-time"><span>Tuesday</span><img src="../images/lineicon.png" alt="line"
+                            class="line-separator"><span>09:00 AM - 07:00 PM</span></div>
+                    <div class="day-time"><span>Wednesday</span><img src="../images/lineicon.png" alt="line"
+                            class="line-separator"><span>09:00 AM - 07:00 PM</span></div>
+                    <div class="day-time"><span>Thursday</span><img src="../images/lineicon.png" alt="line"
+                            class="line-separator"><span>09:00 AM - 07:00 PM</span></div>
+                    <div class="day-time"><span>Friday</span><img src="../images/lineicon.png" alt="line"
+                            class="line-separator"><span>09:00 AM - 07:00 PM</span></div>
+                    <div class="day-time"><span>Saturday</span><img src="../images/lineicon.png" alt="line"
+                            class="line-separator"><span>09:00 AM - 07:00 PM</span></div>
+                    <div class="day-time"><span>Sunday</span><img src="../images/lineicon.png" alt="line"
+                            class="line-separator"><span>Closed</span></div>
+                </div>
+                <div class="emergency-contact">
+                    <hr>
+                    <p class="phone-icon">
+                        <img src="../images/Wphone.png" alt="Phone Icon" class="phone-image">
+                    </p>
+                    <p>Emergency</p>
+                    <p>(237) 681-812-255</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- map-section -->
+
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us On The Map</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12095.742390890123!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjMiTiA3NMKwMDAnMzUuOSJX!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <p>GET IN TOUCH</p>
+                <h2>Contact</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <img src="../images/phone.png" alt="Phone Icon" class="icon" />
+                    <h4>EMERGENCY</h4>
+                    <p>(237) 681-812-255<br />(237) 666-331-894</p>
+                </div>
+
+                <div class="contact-card">
+                    <img src="../images/map.png" alt="Location Icon" class="icon" />
+                    <h4>LOCATION</h4>
+                    <p>0123 Some place<br />9876 Some country</p>
+                </div>
+
+                <div class="contact-card">
+                    <img src="../images/email.png" alt="Email Icon" class="icon" />
+                    <h4>EMAIL</h4>
+                    <p>fildineeesoe@gmail.com<br />mybestudios@gmail.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <img src="../images/clock.png" alt="Clock Icon" class="icon" />
+                    <h4>WORKING HOURS</h4>
+                    <p>Mon-Sat 09:00–20:00<br />Sunday Emergency only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Branding -->
+            <div class="footer-col">
+                <h2 class="footer-logo">MEDDICAL</h2>
+                <p>Leading the Way in Medical<br>Excellence, Trusted Care.</p>
+            </div>
+
+            <!-- Important Links -->
+            <div class="footer-col">
+                <h4>Important Links</h4>
+                <ul>
+                    <li><a href="../Appointment/appointment.html">Appointment</a></li>
+                    <li><a href="../Doctors/doctors.html">Doctors</a></li>
+                    <li><a href="../service/service.html">Services</a></li>
+                    <li><a href="../About_us/aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Call: (237) 681-812-255</p>
+                <p>Email: fildineeesoe@gmail.com</p>
+                <p>Address: 0123 Some place<br>Some country</p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">
+                        <img src="../images/send.png" alt="Send">
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+            <p>© 2021 Hospital's name All Rights Reserved by PNTEC-LTD</p>
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+                    <img src="../images/filin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                    <img src="../images/filfacebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                    <img src="../images/filinstra.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Appointment/script.js"></script>
+
+</body>
+
+</html>

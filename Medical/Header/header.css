@@ -1,0 +1,460 @@
+:root {
+  --primary-color: #1F2B6C;
+  --secondary-color: #159EEC;
+  --accent-color: #BFD2F8;
+  --white-color: #FCFEFE;
+  --black-color: #212124;
+  --transition: 0.3s ease;
+  --button-background: #BFD2F8;
+  --button-text-color: #1F2B6C;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--white-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+/* ========== TOP HEADER ========== */
+.top-header {
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--accent-color);
+  padding: 10px 0;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.top-logo img {
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.contact-info {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-block .icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.info-block > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--black-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  line-height: 1.2;
+}
+
+/* ========== MAIN NAVIGATION (Desktop/Closed Mobile State) ========== */
+.main-header {
+  background-color: var(--primary-color);
+  padding: 16px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.mobile-logo img {
+  height: 35px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.nav-links-desktop {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.nav-links-desktop a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 0;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-links-desktop a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width var(--transition);
+}
+
+.nav-links-desktop a:hover::after,
+.nav-links-desktop a.active::after {
+  width: 100%;
+}
+
+.nav-links-desktop a:hover {
+  color: var(--secondary-color);
+}
+
+.nav-links-desktop a.active {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--secondary-color));
+}
+
+.btn-appointment {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.btn-appointment:hover {
+  background-color: #add1ed;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  display: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--secondary-color));
+}
+
+/* ========== MOBILE FULL-SCREEN OVERLAY MENU ========== */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform var(--transition);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-overlay.show {
+  transform: translateX(0);
+}
+
+.mobile-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mobile-overlay-logo img {
+  height: 42px;
+}
+
+.overlay-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.overlay-controls .search-icon,
+.overlay-controls .close-icon {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.overlay-controls .search-icon:hover,
+.overlay-controls .close-icon:hover {
+  transform: scale(1.1);
+}
+
+.mobile-overlay-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  padding: 40px 20px;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.mobile-overlay-nav-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  transition: color var(--transition);
+  padding: 10px 0;
+  width: fit-content;
+}
+
+.mobile-overlay-nav-links a.active {
+  color: var(--secondary-color);
+}
+
+.mobile-overlay-nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+.btn-appointment-overlay {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 40px;
+  transition: background-color var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.btn-appointment-overlay:hover {
+  background-color: #1a255f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ==================== RESPONSIVE DESIGN (Media Queries) ==================== */
+
+/* Desktop Specific Styles (min-width: 992px) */
+@media (min-width: 992px) {
+  .top-logo {
+    display: block;
+  }
+  .mobile-logo {
+    display: none;
+  }
+  .nav-links-desktop {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+  .nav-links-desktop a {
+    border-bottom: none;
+    width: auto;
+    text-align: left;
+  }
+  .menu-icon {
+    display: none !important;
+  }
+  .btn-appointment {
+    display: block !important;
+  }
+  .mobile-overlay {
+    display: none !important;
+  }
+}
+
+/* Tablets and Mobiles (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+  .top-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .info-block {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .btn-appointment {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Small mobile devices (max-width: 575.98px) */
+@media (max-width: 991.98px) {
+  .top-logo img {
+    display: none;
+  }
+
+  .top-container {
+    padding: 10px 10px;
+    gap: 10px;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .info-block {
+    justify-content: center;
+  }
+
+  .main-header {
+    padding: 12px 0;
+  }
+
+  .mobile-logo img {
+    height: 25px;
+  }
+
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .mobile-overlay-header {
+    padding: 12px 15px;
+  }
+
+  .mobile-overlay-logo img {
+    height: 25px;
+  }
+
+  .overlay-controls .search-icon,
+  .overlay-controls .close-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .mobile-overlay-nav-links {
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .mobile-overlay-nav-links a {
+    font-size: 20px;
+  }
+
+  .btn-appointment-overlay {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
